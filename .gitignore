@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+/.env
+/test_gemini.py
+/import.log
+/things_to_do_in_future.txt
+/evaluation.xlsx
+/.vscode
