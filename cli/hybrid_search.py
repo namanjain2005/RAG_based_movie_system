@@ -148,7 +148,7 @@ class HybridSearch:
             )
             llm_score = int(response.text) # type: ignore
             result["llm_score"] = llm_score
-            time.sleep(5)
+            time.sleep(5) # this only exist because of me hitting free tier tokens you dont need it otherwise
         return sorted(results,key=lambda x:x["llm_score"],reverse=True)
 
     def batch_reranking(self,query:str,searches:list[dict])->list[dict]:
@@ -207,6 +207,7 @@ class HybridSearch:
                 "score":score
             }
         return sorted(doc_scores.values(),key= lambda x:x['score'],reverse=True)
+
 
 
 
